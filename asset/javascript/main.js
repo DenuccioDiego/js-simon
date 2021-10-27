@@ -19,14 +19,16 @@ console.log(numeroRandom)
 
 
 clock = setInterval(function(){
-     
+
      if(seconds<30){
-          seconds++ 
+          seconds++
+          document.getElementById("timer").innerHTML = seconds
           console.log(seconds)
 
      }
      else{
           clearInterval(clock)
+          document.getElementById("timer").innerHTML = "Ora tocca a te"
      } 
 
 },1000)

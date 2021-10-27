@@ -3,7 +3,7 @@
 let numeroRandom = []
 let numeriUtente = []
 let clock ;
-let seconds = 0
+let seconds = -1
 
 do{
      let numero = 0
@@ -18,17 +18,18 @@ do{
 console.log(numeroRandom)
 
 
-     clock = setInterval(function(){
-          if(seconds<30){
-               seconds++
-               console.log(seconds)
+clock = setInterval(function(){
+     
+     if(seconds<30){
+          seconds++ 
+          console.log(seconds)
 
-          }
-          else{
-               clearInterval(clock)
-          }  
+     }
+     else{
+          clearInterval(clock)
+     } 
 
-     },1000)
+},1000)
 
 
 do{

@@ -9,7 +9,7 @@ function chiediUtenteNumero(){
 
      do{
           let numero = 0
-          numero = prompt("inserisci numero")
+          numero = Number(prompt("inserisci numero"))
           numeriUtente.push(numero)
      
      }while(numeriUtente.length<5)
@@ -44,7 +44,7 @@ clock = setInterval(function(){
           
 
      }
-     
+
      else if(seconds==30){
           document.getElementById("timer").innerHTML = "Ora tocca a te"
           seconds++
@@ -54,9 +54,13 @@ clock = setInterval(function(){
           clearInterval(clock)
           
           chiediUtenteNumero()
+          let intersection = numeroRandom.filter(x => numeriUtente.includes(x));
+          console.log(intersection)
+          
      } 
 
 },1000)
+
 
 
 
